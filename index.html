@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<!-- javascript -->
+	<script type="text/javascript" src="flickr.js"></script>
+	
+	<title>flickr Gallery Maker</title>
+</head>
+<body>
+	<div id="container">
+		<!-- LOGO -->
+		<img id="logo" src="images/flickr_gm_logo.png">
+		<!-- Search bar -->
+		<div id="search-bar">
+			<form class="center" onsubmit="return searchFlickr(searchText.value);">
+				<input type="text" class="search-input" name="searchText" placeholder="Search..." />
+				<div id="show-gallery" class="text-button" onClick="showGallery()">view gallery</div>
+			</form>
+		</div>
+		<!-- Image container -->
+		<div id="img-container"></div>
+	</div>
+
+
+
+
+	<!-- Modal : when zoom in on image -->
+	<div id="imgModal" class="modal">
+
+		<!--Close Button -->
+		<span class="close" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+
+		<!-- Modal Image -->
+		<img class="modal-image" id="displayImg">
+
+		<!-- Modal Caption -->
+		<div id="caption"></div>
+	</div>
+
+</body>
+</html>
